@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: yumyssime_production
   username: yumyssime
-  url: <%= ENV['DATABASE_URL'] %>
+  password: <%= ENV["YUMYSSIME_DATABASE-PASSWORD"]
